@@ -30,6 +30,10 @@ contract TokenFarm {
 		_;
 	}
 
+	function stakedTokens(address _staker) public view returns (uint) {
+		return stakingBalance[_staker];
+	}
+
 	function stakeTokens(uint _amount) public {
 		require(_amount > 0, "Amount cannot be zero");
 
