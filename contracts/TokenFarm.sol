@@ -25,7 +25,7 @@ contract TokenFarm {
 		owner = msg.sender;
 	}
 
-	modifier ownerOnly() public {
+	modifier ownerOnly() {
 		require(msg.sender == owner);
 		_;
 	}
@@ -49,7 +49,7 @@ contract TokenFarm {
 		isStaking[msg.sender] = true;
 
 		// trigger an event
-		emit TokensStaked(msg.sender, _amount)
+		emit TokensStaked(msg.sender, _amount);
 	}
 
 	function unstakeTokens(uint _amount) public {
