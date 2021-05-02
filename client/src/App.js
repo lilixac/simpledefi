@@ -135,7 +135,7 @@ const App = () => {
       ) : (
         <div className="App">
           <Navbar bg="dark" variant="dark">
-            <Navbar.Brand href="#home">Simple Defi</Navbar.Brand>
+            <Navbar.Brand href="#home">Yield Farm</Navbar.Brand>
             <Nav className="mr-auto"></Nav>
             <Nav className="whiten">{account}</Nav>
           </Navbar>
